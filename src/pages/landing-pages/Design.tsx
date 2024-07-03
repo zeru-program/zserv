@@ -10,7 +10,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
-import E404 from "../../components/E404"
 
 const JasaAll = () => {
   useEffect(() => {
@@ -150,7 +149,6 @@ const JasaAll = () => {
 }
 
 const Design = () => {
-  const loc = useLocation();
   return (
     <JasaAll/>
     )

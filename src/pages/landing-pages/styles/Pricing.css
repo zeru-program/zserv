@@ -1,6 +1,6 @@
 .box-pricing {
   width: 300px;
-  height auto;
+  height: auto;
 }
 @media screen and (min-width: 600px) {
   .box-pricing {
