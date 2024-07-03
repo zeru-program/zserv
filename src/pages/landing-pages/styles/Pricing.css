@@ -1,0 +1,15 @@
+.box-pricing {
+  width: 300px;
+  height auto;
+}
+@media screen and (min-width: 600px) {
+  .box-pricing {
+    width: 450px;
+  }
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: yellow;
+  }
+  .bi-x-circle {
+  }

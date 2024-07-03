@@ -1,0 +1,46 @@
+.img-welcome {
+}
+@media screen and (max-width: 600px) {
+    .img-welcome {
+        width: 200px;
+        margin-top: 100px;
+    }
+    .text-welcome {
+      padding-top: 50px;
+      text-align: center !important;
+    }
+    .welcome-section {
+        flex-wrap: wrap;
+        justify-content: left !important;
+    }
+    .box-review {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 600px) {
+    .box-review {
+        width: 50%;
+    }
+}
+.box-tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.text-comment-review {
+    text-align: left !important;
+}
+.span-cta-serv {
+    transition: all 1s ease;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .8s ease forwards;
+  
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

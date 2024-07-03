@@ -1,0 +1,88 @@
+/*** navbar style start ***/
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 #000 !important;
+}
+.navbar-toggler {
+    border: 0 !important;
+}
+.dropdown-item:hover {
+  background: #FFD369 !important;
+  color: #000 !important;
+}
+.nav-toggler-icon {
+}
+.navbar {
+    background: rgba(51,62,70,.35) !important;
+}
+.active {
+    color: #FFD369 !important;
+}
+@media screen and (min-width: 678px) {
+    .navbar {
+        padding-inline: 50px !important;
+    }
+    .navbar-collapse {
+        position: absolute;
+        right: 50px;
+    }
+}
+a {
+  color: #FFF !important;
+}
+
+/*** navbar style end ***/
+
+/*** footer style start ***/ 
+footer {
+  background: #161a1b;
+  color: white;
+  width: 100%;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  footer div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer a {
+  text-decoration: none;
+  font-size: .9em;
+  color: #c9cbcc !important;
+}
+.sosmed-footer {
+  font-size: 1.3em;
+}
+footer span {
+  color: #c9cbcc;
+  font-size: .9em;
+}
+@media screen and (min-width: 600px) {
+  .img-footer {
+    width: 200px !important;
+    object-fit: contain;
+  }
+}
+footer a:hover { 
+  color: white !important;
+}
+/*** footer style end ***/
+
+/*** another ***/
+.container {
+    padding-inline: 20px !important;
+}
+p {
+    font-size: .8em;
+}
+.form-control {
+    background: #393E46 !important;
+    border: 1px solid #FFD369 !important;
+    color: #fff !important;
+}
+.form-control:hover {
+    box-shadow: 0 0 1px 3px rgba(255, 211, 105, .3) !important;
+}
+/*** another end ***/
