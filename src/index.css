@@ -64,10 +64,23 @@ footer span {
     width: 200px !important;
     object-fit: contain;
   }
+  .about-us-footer {
+    text-align: center !important;
+    justify-content: center ;
+    padding-inline: 80px;
+  }
+  .text-about {
+    text-align: center !important;
+    padding-bottom: 20px;
+  }
+}
+.text-about {
+  padding-bottom: 40px;
 }
 footer a:hover { 
   color: white !important;
 }
+
 /*** footer style end ***/
 
 /*** another ***/

@@ -16,6 +16,9 @@
     .box-review {
         width: 100%;
     }
+    .jasa-lainnya a h5 {
+      font-size: 1em !important;
+    }
 }
 @media screen and (min-width: 600px) {
     .box-review {
@@ -43,4 +46,27 @@
   to {
     opacity: 1;
   }
+}
+main {
+  background-color:hsla(216,18%,16%,1);
+background-image:
+radial-gradient(at 7% -15%, hsla(0,77.5%,60.9%,.3) 0px, transparent 40%),
+radial-gradient(at 120% 50%, hsla(0,77.5%,60.9%,.3) 0px, transparent 40%),
+radial-gradient(at 7% 100%, hsla(0,77.5%,60.9%,.3) 0px, transparent 40%);
+}
+.btn-start-wel {
+  background: rgb(211,86,86);
+background: linear-gradient(90deg, rgba(211,86,86,1) 0%, rgba(255,211,105,1) 100%);
+  color: #fff !important;
+  font-weight: 600;
+  padding-inline: 35px !important;
+  border: 0 !important;
+}
+.box-why-choose-us {
+  width: 320px;
+  height: 320px;
+}
+.box-why-choose-us img {
+  width: 80px;
+  padding-bottom: 15px;
 }

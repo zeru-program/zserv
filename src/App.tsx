@@ -14,6 +14,8 @@ const App = () => {
       <Route path="/dev/">
        <Route path="jasa-pembuatan-website" element={<Dev/>} />
        <Route path="jasa-pembuatan-aplikasi" element={<Dev/>} />
+       <Route path="jasa-hosting" element={<Dev/>} />
+       <Route path="jasa-domain" element={<Dev/>} />
       </Route>
       <Route path="/design/">
        <Route path="jasa-design" element={<Design/>} />

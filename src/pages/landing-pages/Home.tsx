@@ -2,6 +2,11 @@ import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './styles/home.css'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 
@@ -17,7 +22,7 @@ const WelcomingSection = () => {
     if (currentText === 0) {
       text.textContent = "website";
     } else if (currentText === 1) {
-      text.textContent = "application";
+      text.textContent = "aplikasi";
     } else if (currentText === 2) {
       text.textContent = "design";
     }
@@ -32,14 +37,13 @@ const WelcomingSection = () => {
   return () => clearInterval(interval); // Cleanup interval on component unmount
 }, []);
 
-
     return (
        <section className="w-100 d-flex justify-content-center align-items-center mt-5 text-primary welcome-section container py-5">
        <div className="text-welcome">
         <h1 className="m-0 container-text" data-aos="fade-down">Jasa pembuatan <span style={{color:"#FFD369"}} id="span-cta-serv" className=""></span>
         </h1>
-        <p data-aos="fade-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis esse quam, exercitationem ut assumenda, debitis velit accusamus eveniet sit tempora. Reiciendis esse quam, exercitationem ut assumenda, debitis velit accusamus eveniet sit tempora.</p>
-        <button data-aos="fadeIn" className="btn btn-warning rounded-5 px-4 py-2">Mulai</button>
+        <p data-aos="fade-down">Butuh website aplikasi atau design? Ayo coba layanan digital terbaik dari kami! Kami menjamin proses yang cepat dan efisien, dengan harga yang sangat terjangkau. Menggunakan teknologi terbaru, kami memastikan setiap proyek menghasilkan performa terbaik dan kepuasan maksimal. Percayakan kebutuhan digital Anda kepada kami dan nikmati hasil terbaik kami!</p>
+        <button data-aos="fadeIn" className="btn btn-warning btn-start-wel rounded-5 py-2">Mulai</button>
         </div>
          <img alt="img-welcome" data-aos="fadeIn" className="img-welcome" src="welcome-ilustator.png" />
        </section>
@@ -65,36 +69,235 @@ const TechUsed = () => {
 }
 
 const ServiceCta = () => {
+  useEffect(() => {
+     AOS.init({
+          duration: 1500,
+          once: false,
+        })
+  }, [])
     return (
-      <section className="w-100 d-flex flex-column text-primary mt-3 py-5 d-flex container">
-        <h4 data-aos="fade-in">Our service</h4>
-        <div className="d-flex jutify-content-center gap-2 flex-wrap">
-          <a className="btn text-primary btn-info p-3" href="/pricing" data-aos="zoom-in">
-            <h5>Pembuatan website</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quisquam.</p>
+      <section className="w-100 d-flex flex-column text-primary mt-3 py-5 d-flex">
+        <div className="container w-100">
+       <h4 className="m-0 text-center" data-aos="fadeIn"><span className="text-warning">-</span> Rekomendasi jasa <span className="text-warning">-</span></h4>
+        </div>
+      <section className="text-primary w-100 mt-1 pt-1">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        className="mySwiper mt-3"
+        data-aos="zoom-in"
+      >
+       <SwiperSlide className="d-flex w-100 justify-content-center">
+         <div className="d-flex position-relative flex-column border-2 border-warning box-pricing btn btn-info">
+         <div className="d-flex py-2 text-center justify-content-center text-info w-100 bg-warning position-absolute top-0" style={{left:"0"}}>
+           <h4 className="m-0 text-center">Produk terlaris!</h4>
+         </div>
+         <img src="/images/web.svg" style={{width:"80px",height:"80px"}} className="w-100 d-flex justify-content-center mt-5" alt="" />
+         <h4 className="m-0 fw-bold">Paket basic</h4>
+         <p className="m-0" style={{color:"gray"}}>- Jasa pembuatan website -</p>
+         <p className="m-0">Cocok untuk website personal sederhana atau custom website (bisa untuk joki tugas dsb)</p>
+         <s className="m-0 mt-5" style={{color:"gray"}}>Rp75.000</s>
+         <h1 className="fw-bold m-0 text-warning">Rp40.400</h1>
+         <button className="mx-2 shadow-sm btn btn-warning mt-2">Buy</button>
+         <hr className="my-4" />
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">1 website.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">maximal 4 pages.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">gratis hosting.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">gratis domain (.web.app).</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">gratis SSL.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">responsif design.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">static pages.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">maintence.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">fitur e-commerce.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">integrisasi social media.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">database.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">framework.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">indexing google.</p>
+         </div>
+         <p className="m-0" style={{color:"gray"}}>proses 3-5 hari</p>
+         </div>
+       </SwiperSlide>
+       <SwiperSlide className="d-flex w-100 justify-content-center">
+         <div className="d-flex position-relative flex-column border-2 border-warning box-pricing btn btn-info">
+         <div className="d-flex py-2 text-center justify-content-center text-info w-100 bg-warning position-absolute top-0" style={{left:"0"}}>
+           <h4 className="m-0 text-center">Produk terbaik!</h4>
+         </div>
+         <img src="/images/app.svg" style={{width:"80px",height:"80px"}} className="w-100 d-flex justify-content-center mt-5" alt="" />
+         <h4 className="m-0 fw-bold">Paket premium</h4>
+         <p className="m-0" style={{color:"gray"}}>- Jasa pembuatan aplikasi -</p>
+         <p className="m-0">Paket aplikasi maupun berbasis CLI cocok untuk aplikasi e-commerce sederhana</p>
+         <h1 className="fw-bold m-0 mt-5 text-warning">Rp150.900</h1>
+         <button className="mx-2 shadow-sm btn btn-warning mt-2">Buy</button>
+         <hr className="my-4" />
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">1 application.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">maximal 6 pages (include login/register).</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">static pages.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">custom design.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">gratis 1 week maintenance.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">gratis tutorial how to use the app.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">no database.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">no publish app.</p>
+         </div>
+         </div>
+       </SwiperSlide>
+       <SwiperSlide className="d-flex w-100 justify-content-center">
+         <div className="d-flex position-relative flex-column border-2 border-warning box-pricing btn btn-info">
+         <div className="d-flex py-2 text-center justify-content-center text-info w-100 bg-warning position-absolute top-0" style={{left:"0"}}>
+           <h4 className="m-0 text-center">Produk terbaik!</h4>
+         </div>
+         <img src="/images/web.svg" style={{width:"80px",height:"80px"}} className="w-100 d-flex justify-content-center mt-5" alt="" />
+         <h4 className="m-0 fw-bold">Design produk</h4>
+         <p className="m-0" style={{color:"gray"}}>- Jasa pembuatan design -</p>
+         <p className="m-0">Cocok untuk design produk bisnis mu, baik itu baju, barang, makanan, dan lainnya</p>
+         <s className="m-0 mt-5" style={{color:"gray"}}>Rp99.000</s>
+         <h1 className="fw-bold m-0 text-warning">Rp76.400</h1>
+         <button className="mx-2 shadow-sm btn btn-warning mt-2">Buy</button>
+         <hr className="my-4" />
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">2 design.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">custom design.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">gratis 10x revisi.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">file format png/jpg.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">hd quality.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-warning"></i>
+           <p className="m-0">hrjdd.</p>
+         </div>
+         </div>
+       </SwiperSlide>
+      </Swiper>
+     </section>
+      <div className="container mt-5">
+      <h4 className="mt-4" href="/">Lihat jasa lainnya <i className="bi bi-arrow-down text-warning"></i></h4>
+      </div>
+        <div className="d-flex container mt-3 jutify-content-center jasa-lainnya gap-3 flex-wrap">
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/dev/jasa-pembuatan-website" data-aos="zoom-in">
+            <h5 className="m-0">Pembuatan website</h5>
           </a>
-          <a className="btn text-primary btn-info p-3" href="/pricing" data-aos="zoom-in">
-            <h5>Pembuatan aplikasi</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quisquam.</p>
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/dev/jasa-hosting" data-aos="zoom-in">
+            <h5 className="m-0">Hosting website</h5>
           </a>
-          <a className="btn text-primary btn-info p-3" href="/pricing" data-aos="zoom-in">
-            <h5>Design grapichs</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quisquam.</p>
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/dev/jasa-domain" data-aos="zoom-in">
+            <h5 className="m-0">Register domain</h5>
+          </a>
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/dev/jasa-pembuatan-aplikasi" data-aos="zoom-in">
+            <h5 className="m-0">Pembuatan aplikasi</h5>
+          </a>
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/design/jasa-design" data-aos="zoom-in">
+            <h5 className="m-0">Produk desainer</h5>
+          </a>
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/design/jasa-design" data-aos="zoom-in">
+            <h5 className="m-0">Web desainer</h5>
+          </a>
+          <a className="btn text-warning border-2 border-warning btn-info p-3" href="/design/jasa-design" data-aos="zoom-in">
+            <h5 className="m-0">Logo desainer</h5>
           </a>
         </div>
-        <a href="/pricing" data-aos="zoom-in" className="btn btn-warning mt-2 text-secondary" style={{width:"200px"}}>Take our service</a>
       </section>
     )
 }
 
-const AboutUs = () => {
-    return (
-        <section className="w-100 mt-2 container" data-aos="fade-in">
-          <div className="btn d-flex flex-column text-left align-items-start btn-info py-3 w-100">
-           <h4>Tentang kami</h4>
-           <p className="text-left text-comment-review">I am Justine, who started a career in digital art creation services. I am the Justine behind the name Zeru. I currently provide three services, namely website builder, application builder and graphic design. I started this service in 2023 when I was in junior high school. Currently I have served several clients with satisfactory results.</p>
-          </div>
-        </section>
+const WhyChooseUs = () => {
+  return (
+    <section className="w-100 text-primary container mt-5 mb-5">
+     <h4 className="m-0">Kenapa memilih Zserv?</h4>
+     <div className="d-flex mt-3 gap-4 w-100 flex-wrap justify-content-center">
+       <div class="btn px-4 d-flex flex-column justify-content-center align-items-center btn-info box-why-choose-us">
+         <img src="/images/time-fast.svg" alt="" />
+         <h5>Proses cepat dan efisien</h5>
+         <p>Kami memahami bahwa waktu adalah hal yang berharga bagi Anda. Dengan pendekatan kerja yang terstruktur dan tim yang berpengalaman, kami menjamin proses pengembangan yang cepat dan efisien tanpa mengorbankan kualitas.</p>
+       </div>
+       <div class="btn px-4 d-flex flex-column justify-content-center align-items-center btn-info box-why-choose-us">
+         <img src="/images/harga.svg" alt="" />
+         <h5>Harga terjangkau</h5>
+         <p>Kami menawarkan layanan berkualitas tinggi dengan harga yang bersahabat. Dengan berbagai paket yang dapat disesuaikan dengan anggaran Anda, kami memastikan setiap investasi Anda memberikan nilai maksimal.</p>
+       </div>
+       <div class="btn px-4 d-flex flex-column justify-content-center align-items-center btn-info box-why-choose-us">
+         <img src="/images/teknologi.svg" alt="" />
+         <h5>Teknologi terkini dan terpercaya</h5>
+         <p>Kami selalu mengikuti perkembangan teknologi terbaru untuk memberikan solusi yang modern dan relevan. Menggunakan alat dan platform terkini, kami memastikan setiap proyek berjalan dengan aman, stabil, dan optimal.</p>
+       </div>
+     </div>
+    </section>
     )
 }
 
@@ -143,7 +346,7 @@ const Home = () => {
      <WelcomingSection/>
      <TechUsed/>
      <ServiceCta/>
-     <AboutUs/>
+     <WhyChooseUs/>
      <ReviewService/>
     </main>
     <Footer/>

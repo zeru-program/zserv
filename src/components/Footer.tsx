@@ -1,8 +1,11 @@
 const Footer = () => {
   return (
     <footer className="py-5 px-3 d-flex flex-column">
+     <div className="about-us-footer">
+      <img src="/zserv-nav.png" className="img-footer" style={{width:"150px",height:"auto"}} alt="" />
+        <p className="text-left text-about text-comment-review">Saya Justine, yang memulai karir di bidang jasa pembuatan seni digital. Saya Justine di balik nama Zeru. Saat ini saya menyediakan tiga layanan, yaitu pembuat situs web, pembuat aplikasi, dan desain grafis. Saya memulai pengabdian ini pada tahun 2023 ketika saya masih duduk di bangku SMP. Saat ini saya telah melayani beberapa klien dengan hasil yang memuaskan.</p>
+     </div>
       <div className="d-flex justify-content-around flex-wrap gap-5">
-      <img src="/zserv-nav.png" className="img-footer" style={{width:"150px"}} alt="" />
       <div className="d-flex flex-column">
         <h4 className="m-0">Navigation</h4>
         <a href="/" className="m-0"><ion-icon name="chevron-forward-outline"></ion-icon> Home</a>

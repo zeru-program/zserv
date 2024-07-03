@@ -21,6 +21,8 @@ const Navbar = () => {
               </a>
               <div className="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
                 <a className="dropdown-item" href="/dev/jasa-pembuatan-website">Pembuatan website</a>
+                <a className="dropdown-item" href="/dev/jasa-pembuatan-website">Hosting website</a>
+                <a className="dropdown-item" href="/dev/jasa-pembuatan-website">Register domain</a>
                 <a className="dropdown-item" href="/dev/jasa-pembuatan-aplikasi">Pembuatan aplikasi</a>
               </div>
             </li>

@@ -21,7 +21,7 @@ const JasaAll = () => {
   return (
     <>
     <Navbar/>
-    <main className="w-100 m-0 my-3">
+    <main className="w-100 m-0 mt-3 pb-3">
      <section className="text-primary w-100 mt-5 pt-5">
        <h4 className="container m-0" data-aos="fadeIn"><span className="text-warning">-</span> Jasa design <span className="text-warning">-</span></h4>
        <Swiper
@@ -41,10 +41,10 @@ const JasaAll = () => {
          </div>
          <img src="/images/web.svg" style={{width:"80px",height:"80px"}} className="w-100 d-flex justify-content-center mt-5" alt="" />
          <h4 className="m-0 fw-bold">Product design</h4>
-         <p className="m-0">Suitable for designing your business products that you want to show to the world through visual design</p>
+         <p className="m-0">Cocok untuk design produk bisnis mu, seperti barang, makanan, dll.</p>
          <s className="m-0 mt-5" style={{color:"gray"}}>Rp99.000</s>
          <h1 className="fw-bold m-0 text-warning">Rp76.400</h1>
-         <button className="mx-2 shadow-sm btn btn-warning mt-2">Buy</button>
+         <button className="mx-2 shadow-sm btn btn-warning mt-2">Gunakan jasa ini</button>
          <hr className="my-4" />
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
@@ -56,7 +56,7 @@ const JasaAll = () => {
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
-           <p className="m-0">free 10x revisi.</p>
+           <p className="m-0">gratis 10x revisi.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
@@ -67,8 +67,16 @@ const JasaAll = () => {
            <p className="m-0">hd quality.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
-           <i className="bi bi-x-circle text-warning"></i>
-           <p className="m-0">hrjdd.</p>
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">desain unik & profesional.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">proses 3-5 hari.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">source file.</p>
          </div>
          </div>
        </SwiperSlide>
@@ -76,21 +84,21 @@ const JasaAll = () => {
          <div className="d-flex position-relative flex-column border-2 border-warning box-pricing btn btn-info">
          <img src="/images/web.svg" style={{width:"80px",height:"80px"}} className="w-100 d-flex justify-content-center mt-5" alt="" />
          <h4 className="m-0 fw-bold">Logo design</h4>
-         <p className="m-0">Suitable for designing a logo for your business or your squad</p>
+         <p className="m-0">Cocok untuk design logo bisnis mu maupun logo custom</p>
          <h1 className="fw-bold m-0 mt-5 text-warning">Rp50.400</h1>
-         <button className="mx-2 shadow-sm btn btn-warning mt-2">Buy</button>
+         <button className="mx-2 shadow-sm btn btn-warning mt-2">Gunakan jasa ini</button>
          <hr className="my-4" />
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
-           <p className="m-0">2-3 design.</p>
+           <p className="m-0">2 design.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
-           <p className="m-0">custom design.</p>
+           <p className="m-0">design unik dan profesional.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
-           <p className="m-0">free 5x revisi.</p>
+           <p className="m-0">gratis 5x revisi.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
@@ -101,8 +109,16 @@ const JasaAll = () => {
            <p className="m-0">hd quality.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
-           <i className="bi bi-x-circle text-warning"></i>
-           <p className="m-0">hrjdd.</p>
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">proses 5 hari.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">source file.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">custom design.</p>
          </div>
          </div>
        </SwiperSlide>
@@ -110,13 +126,13 @@ const JasaAll = () => {
          <div className="d-flex position-relative flex-column border-2 border-warning box-pricing btn btn-info">
          <img src="/images/web.svg" style={{width:"80px",height:"80px"}} className="w-100 d-flex justify-content-center mt-5" alt="" />
          <h4 className="m-0 fw-bold">Web design / UI UX</h4>
-         <p className="m-0">Suitable for designing websites and CMS</p>
+         <p className="m-0">Cocok untuk mendesain website dalam tahap designing & analisis</p>
          <h1 className="fw-bold m-0 mt-5 text-warning">Rp151.000</h1>
-         <button className="mx-2 shadow-sm btn btn-warning mt-2">Buy</button>
+         <button className="mx-2 shadow-sm btn btn-warning mt-2">Gunakan jasa ini</button>
          <hr className="my-4" />
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
-           <p className="m-0">2-3 design.</p>
+           <p className="m-0">1 design (termasuk full page).</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
@@ -124,7 +140,19 @@ const JasaAll = () => {
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
-           <p className="m-0">free 5x revisi.</p>
+           <p className="m-0">gratis 15x revisi.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">responsif design.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">design unik dan profesional.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">menggunakan teknologi canva atau figma.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
            <i className="bi bi-check2-circle text-warning"></i>
@@ -135,8 +163,12 @@ const JasaAll = () => {
            <p className="m-0">hd quality.</p>
          </div>
          <div className="d-flex gap-2 mb-2 align-items-center">
-           <i className="bi bi-x-circle text-warning"></i>
-           <p className="m-0">hrjdd.</p>
+           <i className="bi bi-check2-circle text-warning"></i>
+           <p className="m-0">proses 1 minggu.</p>
+         </div>
+         <div className="d-flex gap-2 mb-2 align-items-center">
+           <i className="bi bi-x-circle text-danger"></i>
+           <p className="m-0">source file.</p>
          </div>
          </div>
        </SwiperSlide>
