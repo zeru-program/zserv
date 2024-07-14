@@ -3,6 +3,8 @@ import Home from "./pages/landing-pages/Home"
 import Pricing from "./pages/landing-pages/Pricing"
 import Dev from "./pages/landing-pages/Dev"
 import Design from "./pages/landing-pages/Design"
+import Portofolio from "./pages/landing-pages/Portofolio"
+import Contact from "./pages/landing-pages/Contact"
 import E404 from "./components/E404"
 
 const App = () => {
@@ -20,6 +22,8 @@ const App = () => {
       <Route path="/design/">
        <Route path="jasa-design" element={<Design/>} />
       </Route>
+      <Route path="/portofolio" element={<Portofolio/>} />
+      <Route path="/contact-kami" element={<Contact/>} />
       <Route path="*" element={<E404/>} />
      </Routes>
     </Router>

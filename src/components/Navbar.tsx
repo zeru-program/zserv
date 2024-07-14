@@ -16,13 +16,13 @@ const Navbar = () => {
               <a className={`nav-link ${loc.pathname === "/" ? "active" : ""}`} aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item dropdown">
-              <a className={`nav-link dropdown-toggle ${loc.pathname === "/dev/jasa-pembuatan-website" || loc.pathname === "/dev/jasa-pembuatan-aplikasi" || loc.pathname === "/dev/jasa-landing-page" ? "active" : ""}`} href="" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a className={`nav-link dropdown-toggle ${loc.pathname === "/dev/jasa-pembuatan-website" || loc.pathname === "/dev/jasa-pembuatan-aplikasi" || loc.pathname === "/dev/jasa-hosting" || loc.pathname === "/dev/jasa-domain" ? "active" : ""}`} href="" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Jasa development
               </a>
               <div className="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
                 <a className="dropdown-item" href="/dev/jasa-pembuatan-website">Pembuatan website</a>
-                <a className="dropdown-item" href="/dev/jasa-pembuatan-website">Hosting website</a>
-                <a className="dropdown-item" href="/dev/jasa-pembuatan-website">Register domain</a>
+                <a className="dropdown-item" href="/dev/jasa-hosting">Hosting website</a>
+                <a className="dropdown-item" href="/dev/jasa-domain">Register domain</a>
                 <a className="dropdown-item" href="/dev/jasa-pembuatan-aplikasi">Pembuatan aplikasi</a>
               </div>
             </li>
@@ -37,10 +37,10 @@ const Navbar = () => {
               </div>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${loc.pathname === "/portofolio" ? "active" : ""}`} href="/portofolio">Our portofolio</a>
+              <a className={`nav-link ${loc.pathname === "/portofolio" ? "active" : ""}`} href="/portofolio">Portofolio</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${loc.pathname === "/contact-us" ? "active" : ""}`} href="/contact-us">Contact us</a>
+              <a className={`nav-link ${loc.pathname === "/contact-kami" ? "active" : ""}`} href="/contact-kami">Contact kami</a>
             </li>
           </ul>
         </div>

@@ -50,7 +50,7 @@
 main {
   background-color:hsla(216,18%,16%,1);
 background-image:
-radial-gradient(at 7% -15%, hsla(0,77.5%,60.9%,.3) 0px, transparent 40%),
+radial-gradient(at 7% -15%, hsla(0,77.5%,60.9%,.4) 0px, transparent 40%),
 radial-gradient(at 120% 50%, hsla(0,77.5%,60.9%,.3) 0px, transparent 40%),
 radial-gradient(at 7% 100%, hsla(0,77.5%,60.9%,.3) 0px, transparent 40%);
 }
@@ -69,4 +69,7 @@ background: linear-gradient(90deg, rgba(211,86,86,1) 0%, rgba(255,211,105,1) 100
 .box-why-choose-us img {
   width: 80px;
   padding-bottom: 15px;
+}
+.ipt-review::placeholder {
+  color: gray !important;
 }

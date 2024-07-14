@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&display=swap');
+
+body {
+  font-family: "Alata", Sans-Serif !important;
+}
+
 /*** navbar style start ***/
 .navbar-toggler:hover,
 .navbar-toggler:active,
@@ -14,7 +20,7 @@
 .nav-toggler-icon {
 }
 .navbar {
-    background: rgba(51,62,70,.35) !important;
+  background: rgb(57,62,70,.3) !important;
 }
 .active {
     color: #FFD369 !important;
@@ -97,5 +103,16 @@ p {
 }
 .form-control:hover {
     box-shadow: 0 0 1px 3px rgba(255, 211, 105, .3) !important;
+}
+.btn-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.btn-wa img {
+  width: 50px;
+  background: white;
+  border-radius: 50%;
 }
 /*** another end ***/
